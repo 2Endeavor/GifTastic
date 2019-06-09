@@ -5,7 +5,7 @@
 var topics = ["Batman", "Ironman", "Wonder Woman", "Super Girl"];
 
 // Function for placing the JSON content for each button into the div
-function displaySuperheroGifs() {}
+//function displaySuperheroGifs() {}
 
 // Function for displaying the buttons
 function renderButtons() {
@@ -16,15 +16,15 @@ function renderButtons() {
     button.text(topics[i]);
     $("#button-view").append(button);
   }
+  debugger;
 }
-renderButtons();
 
 $(document).on("click", ".superhero-button", function() {
   $("#superheroGifs").empty();
   var type = $(this).attr("data-type");
   console.log(type);
   var queryURL =
-    "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=QDbQHB76EXbeaDedJzwuuVU3b6ldCiRj&limit=15";
+  "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=QDbQHB76EXbeaDedJzwuuVU3b6ldCiRj&limit=15";
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -44,16 +44,35 @@ $(document).on("click", ".superhero-button", function() {
     }
   });
 });
+
 $(document).on("click",".hero-image", function(){
   var state = $(this).attr("data-state");
   console.log(state);
-if(state==="still"){
-  $(this).attr("src",$(this).attr("data-animate"));
-  $(this).attr("data-state","animate");
-
-
-}else{
-  $(this).attr("src",$(this).attr("data-still"));
-  $(this).attr("data-state","still");
-}
+  if(state==="still"){
+    $(this).attr("src",$(this).attr("data-animate"));
+    $(this).attr("data-state","animate");
+    
+    
+  }else{
+    $(this).attr("src",$(this).attr("data-still"));
+    $(this).attr("data-state","still");
+  }
 })
+// add superhero that was typed in
+$(document).on("click", "#add-hero", function(){
+  var newHero = $("input#new-hero").val().trim();
+  topics.push(newHero);
+  renderButtons();
+  
+  console.log(newHero);
+  
+  
+});
+
+
+  
+
+
+  
+
+renderButtons();
