@@ -1,3 +1,10 @@
+
+body {
+   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhOmABgeHExVluEqg2bsfPIOLLiGJgMmqNd-Y6f0v4H5b2VYDEgQ");
+   background-repeat: no-repeat;
+   background-size: 100%;
+
+}
 label{
   font-size: 25px;
   text-align:center
@@ -24,3 +31,4 @@ h1{
   text-align: center;
   
 }
+
