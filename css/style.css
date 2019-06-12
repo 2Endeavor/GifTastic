@@ -1,24 +1,38 @@
 
 body {
    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhOmABgeHExVluEqg2bsfPIOLLiGJgMmqNd-Y6f0v4H5b2VYDEgQ");
-   background-repeat: no-repeat;
+   background-repeat: repeat;
    background-size: 100%;
 
 }
 label{
-  font-size: 25px;
-  text-align:center
+  font-size: 35px;
+  text-align:center;
+  font-family:'Concert One';
 }
 
 input{
   font-size: 20px;
+  background-color: red;
+  font-family:'Concert One';
+  color: white;
+  border-style: solid;
+  border-color: yellow;
+  
+}
+
+label{
+  color: green;
   
 }
 
 .superhero-button{
-  background-color: blue;
+  background-color:red;
+  border-style: solid;
+  border-color: yellow;
   font-size: 25px;
   margin-right: 8px;
+  font-family:'Concert One';
   
   color: white;
 }
@@ -27,8 +41,16 @@ input{
   margin-top: 20px;
 }
 h1{
-  font-size: 45px;
+  font-size: 70px;
   text-align: center;
+  color:green;
+  font-family: 'Racing Sans One';
+  /* 'Racing Sans One', cursive; 'Bubblegum Sans', cursive; 'Concert One', cursive; */
   
 }
+
+#superheroGifs{
+  margin-top: 25px;
+}
+
 

@@ -8,13 +8,9 @@ In addition to the five buttons that are programed in, the user can create their
 When entering the hero’s name, the user can enter the data by either clicking the Add a Hero button or pressing the enter key.
 
 Bugs to fix and styling to improve:
-1.	Site isn’t mobile ready 
+1.	Blank buttons appear when no text is entered
 2.	Duplicate buttons are created if user types a character’s name more than once
-3.	Buttons need to have more padding around them
-4.	Superhero names in the button should be centered
-5.	Add a hero button needs more padding around it
-6.	Change the font to comic scans
-7.	Get a background image
-8.	The letters on the hero buttons should be all upper-case
+
+3.	The letters on the hero buttons should be all upper-case
 
 I had a lot of fun playing with this program and the Gifs!
