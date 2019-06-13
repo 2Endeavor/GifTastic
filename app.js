@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var topics = ["Batman", "Ironman", "Wonder Woman", "Super Girl","Captain America"];
+  var topics = ["Spiderman","Batman", "Ironman", "Wonder Woman", "Super Girl","Captain America"];
 
   // functions
   function renderButtons() {
@@ -77,4 +77,6 @@ $(document).ready(function() {
  
   // start page
   renderButtons();
+
+  
 });

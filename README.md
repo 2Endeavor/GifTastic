@@ -5,7 +5,7 @@ This program starts with a row of five buttons, each with a different name of a 
 
 In addition to the five buttons that are programed in, the user can create their ow buttons by clicking on the button, “Add a Hero”. Once clicked, images of the hero referenced are displayed a new button for that hero is displayed.
 
-When entering the hero’s name, the user can enter the data by either clicking the Add a Hero button or pressing the enter key.
+Originally I had a button the user was required to use to enter new hero names. I hated the button because I naturally wanted to hit the enter key to submit the new name. I decided to get rid of the button and now the users fingers can stay on the keyboard.
 
 Bugs to fix and styling to improve:
 1.	Blank buttons appear when no text is entered
