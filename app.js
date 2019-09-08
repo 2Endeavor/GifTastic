@@ -22,7 +22,7 @@ $(document).ready(function() {
     var queryURL =
       "https://api.giphy.com/v1/gifs/search?q=" +
       superhero +
-      "&api_key=QDbQHB76EXbeaDedJzwuuVU3b6ldCiRj&limit=15";
+      "&api_key=QDbQHB76EXbeaDedJzwuuVU3b6ldCiRj&limit=15&rating=PG-13";
     $.ajax({
       url: queryURL,
       method: "GET"

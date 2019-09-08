@@ -1,4 +1,16 @@
 # GifTastic
+
+TODO: Need to hide keys
+
+TODO: Duplicate buttons can be added. For example, spiderman button can be added multiple times. 
+
+TODO: Shouldn't be able to add a blank button
+
+TODO: Need to deploy this app
+
+Restrict the giffy ratings to PG-13-Done!
+
+
 The theme of this gif grabber is superheroes. 
 
 This program starts with a row of five buttons, each with a different name of a superhero. When clicked, 15 Gif are displayed on the screen. Each time the user clicks a new button, the images are cleared, and the new images are populated.
