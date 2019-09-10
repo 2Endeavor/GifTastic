@@ -9,7 +9,15 @@ $(document).ready(function() {
       button.addClass("superhero-button");
       button.attr("data-type", topics[i]);
       button.text(topics[i]);
-      $("#button-view").append(button);
+      if(topics[i]===""){
+        console.log("this is a blank button")
+      }
+      else{
+        $("#button-view").append(button)
+
+      };
+    
+
     }
   }
 
@@ -53,19 +61,37 @@ $(document).ready(function() {
       $(this).attr("data-state", "still");
     }
   }
-
+// Adding an if statement to keep blank and duplicate buttons from being added
   function addHeroToTopic() {
     var newHero = $("input#new-hero")
       .val()
       .trim()
-      titleText(newHero);
-      console.log("line 62 ",newHero)
-    topics.push(newHero);
-    renderButtons();
-    giphyAjax(newHero);
-    $("input#new-hero").val('');
-  
-  }
+      .toLowerCase()
+      // titleText(newHero);
+      // if(topics.indexOf(newHero)===-1 && newHero !==""){
+      if(topics.indexOf(newHero)!==-1){
+        console.log("line 73 newHero: ", newHero);
+        giphyAjax(newHero)
+        $("input#new-hero").val('')
+      }
+      else if (newHero === ""){
+        giphyAjax("spiderman")
+        $("input#new-hero").val('')
+        console.log("line 79 newHero: ", newHero);
+
+      }
+      else {
+        console.log(topics.indexOf(newHero), newHero)
+        console.log("line 85 newHero: ", newHero);
+        topics.push(newHero)
+        console.log("line 66", topics)
+        renderButtons()
+        giphyAjax(newHero);
+        $("input#new-hero").val('')
+
+      }};
+
+
 
 //Function to convert the button text to title case
   function titleText(hero){
