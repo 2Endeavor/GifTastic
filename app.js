@@ -57,12 +57,42 @@ $(document).ready(function() {
   function addHeroToTopic() {
     var newHero = $("input#new-hero")
       .val()
-      .trim();
+      .trim()
+      titleText(newHero);
+      console.log("line 62 ",newHero)
     topics.push(newHero);
     renderButtons();
     giphyAjax(newHero);
     $("input#new-hero").val('');
+  
   }
+
+//Function to convert the button text to title case
+  function titleText(hero){
+    temp = [];
+    temp.push(hero[0].toUpperCase());
+    console.log("line 77 temp array: ",temp);
+    for (let i = 1; i < hero.length; i++) {
+      if (hero[i] ===" "){
+        temp.push(hero[i])
+        temp.push(hero[i+1].toUpperCase());
+        i++
+      }else{
+       temp.push(hero[i]);
+      }
+      
+      
+      
+    }
+    newHero = temp.join("");
+    console.log("line 90", newHero)
+    
+    return newHero;
+   
+  }
+
+  // Temp[0] will always be captiolized
+// Any letter following a space will be capitolized
 
   // event listeners
   $(document).on("click", ".superhero-button", superheroButtonClick);
