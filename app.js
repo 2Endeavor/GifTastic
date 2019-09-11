@@ -10,7 +10,6 @@ $(document).ready(function() {
       button.attr("data-type", topics[i]);
       button.text(topics[i]);
       if(topics[i]===""){
-        console.log("this is a blank button")
       }
       else{
         $("#button-view").append(button)
@@ -73,23 +72,17 @@ $(document).ready(function() {
     };
       // if(topics.indexOf(newHero)===-1 && newHero !==""){
       if(topics.indexOf(newHero)!==-1){
-        console.log("line 73 newHero: ", newHero)
         giphyAjax(newHero)
         $("input#new-hero").val('');
       }
       else if (newHero === ""){
-        console.log("line 78 newHero: ", newHero)
         giphyAjax("spiderman")
         $("input#new-hero").val('')
-        console.log("line 79 newHero: ", newHero);
 
       }
       else {
         // newHero = titleText(newHero)
-        console.log(topics.indexOf(newHero), newHero)
-        console.log("line 85 newHero: ", newHero)
         topics.push(newHero)
-        console.log("line 66", topics)
         renderButtons()
         giphyAjax(newHero);
         $("input#new-hero").val('')
@@ -100,10 +93,8 @@ $(document).ready(function() {
 
 //Function to convert the button text to title case
   function titleText(hero){
-    console.log("line 100 hero: ", hero);
     temp = [];
     temp.push(hero[0].toUpperCase());
-    console.log("line 77 temp array: ",temp);
     for (let i = 1; i < hero.length; i++) {
       if (hero[i] ===" "){
         temp.push(hero[i])
@@ -117,7 +108,6 @@ $(document).ready(function() {
       
     }
     newHero = temp.join("");
-    console.log("line 90", newHero)
     
     return newHero;
    
