@@ -67,22 +67,24 @@ $(document).ready(function() {
       .val()
       .trim()
       .toLowerCase()
-      // titleText(newHero);
+      // newHero = titleText(newHero);
       // if(topics.indexOf(newHero)===-1 && newHero !==""){
       if(topics.indexOf(newHero)!==-1){
-        console.log("line 73 newHero: ", newHero);
+        console.log("line 73 newHero: ", newHero)
         giphyAjax(newHero)
-        $("input#new-hero").val('')
+        $("input#new-hero").val('');
       }
       else if (newHero === ""){
+        console.log("line 78 newHero: ", newHero)
         giphyAjax("spiderman")
         $("input#new-hero").val('')
         console.log("line 79 newHero: ", newHero);
 
       }
       else {
+        newHero = titleText(newHero)
         console.log(topics.indexOf(newHero), newHero)
-        console.log("line 85 newHero: ", newHero);
+        console.log("line 85 newHero: ", newHero)
         topics.push(newHero)
         console.log("line 66", topics)
         renderButtons()
@@ -117,8 +119,7 @@ $(document).ready(function() {
    
   }
 
-  // Temp[0] will always be captiolized
-// Any letter following a space will be capitolized
+
 
   // event listeners
   $(document).on("click", ".superhero-button", superheroButtonClick);
