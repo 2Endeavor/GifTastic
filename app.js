@@ -66,8 +66,11 @@ $(document).ready(function() {
     var newHero = $("input#new-hero")
       .val()
       .trim()
-      .toLowerCase()
-      // newHero = titleText(newHero);
+      // .toLowerCase()
+      if(newHero !==""){
+      newHero = titleText(newHero);
+ 
+    };
       // if(topics.indexOf(newHero)===-1 && newHero !==""){
       if(topics.indexOf(newHero)!==-1){
         console.log("line 73 newHero: ", newHero)
@@ -82,7 +85,7 @@ $(document).ready(function() {
 
       }
       else {
-        newHero = titleText(newHero)
+        // newHero = titleText(newHero)
         console.log(topics.indexOf(newHero), newHero)
         console.log("line 85 newHero: ", newHero)
         topics.push(newHero)
@@ -97,6 +100,7 @@ $(document).ready(function() {
 
 //Function to convert the button text to title case
   function titleText(hero){
+    console.log("line 100 hero: ", hero);
     temp = [];
     temp.push(hero[0].toUpperCase());
     console.log("line 77 temp array: ",temp);
