@@ -66,7 +66,7 @@ $(document).ready(function() {
     var newHero = $("input#new-hero")
       .val()
       .trim()
-      // .toLowerCase()
+      .toLowerCase()
       if(newHero !==""){
       newHero = titleText(newHero);
  
