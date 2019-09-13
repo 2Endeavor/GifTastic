@@ -1,0 +1,23 @@
+{
+  "name": "GifTastic",
+  "version": "1.0.0",
+  "description": "The theme of this gif grabber is superheroes.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2Endeavor/GifTastic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2Endeavor/GifTastic/issues"
+  },
+  "homepage": "https://github.com/2Endeavor/GifTastic#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0"
+  }
+}

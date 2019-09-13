@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
   var topics = ["Spiderman","Batman", "Ironman", "Wonder Woman", "Super Girl","Captain America"];
 
@@ -26,6 +28,8 @@ $(document).ready(function() {
   }
 
   function giphyAjax(superhero) {
+    // require('dotenv').config();
+    // console.log(process.env);
     var queryURL =
       "https://api.giphy.com/v1/gifs/search?q=" +
       superhero +
